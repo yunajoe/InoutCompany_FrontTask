@@ -2,4 +2,6 @@
 
 ### 1. MBTI
 
+npm run mbti
+
 ### 2. 순서바꾸기
