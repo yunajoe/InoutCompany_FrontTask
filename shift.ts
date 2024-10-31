@@ -24,6 +24,7 @@ const shiftArrToLeft = (dataArr: number[], selectedArr: number[]) => {
   console.log(selectedArr);
 };
 
+//test
 shiftArrToLeft([1, 2, 3], [1]);
 shiftArrToLeft([1, 2, 3], [2]);
 shiftArrToLeft([1, 2, 3], [3]);
