@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "tsc && node dist/test.js",
-    "mbti": "tsc && node dist/mbti.js"
+    "mbti": "tsc && node dist/mbti.js",
+    "shift": "tsc && node dist/shift.js"
   }
 }

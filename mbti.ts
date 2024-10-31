@@ -72,7 +72,7 @@ const mbtiObj: MbtiObj = {
   J: 0,
 };
 console.log("MBTI 설문을 시작하겠습니다.");
-console.log(); // 한 줄 띄우기
+console.log();
 console.log(`총 ${questions.length}문제 입니다.`);
 console.log("\n");
 
@@ -148,6 +148,7 @@ const MBTIRESULT = (arr: QuestionArrType, questionIndex: number) => {
 
   console.log(text);
   console.log(choiceQuestions);
+  // TODO: user가 1부터 5까지만 선택하도록 하기
 
   rl.question("숫자로 답변해주세요 ===> ", (answer: number) => {
     userAnswer.push(Number(answer));
