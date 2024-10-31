@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@types/node": "^22.8.4",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "start": "tsc && node dist/test.js",
+    "mbti": "tsc && node dist/mbti.js"
+  }
+}
