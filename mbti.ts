@@ -99,10 +99,17 @@ const MBTIRESULT = (arr: QuestionArrType, questionIndex: number) => {
 
   console.log(text);
   console.log(choiceQuestions);
-  // TODO: user가 1부터 5까지만 선택하도록 하기
 
   rl.question("숫자로 답변해주세요 ===> ", (answer: number) => {
-    userAnswer.push(Number(answer));
+    const choice = Number(answer);
+    if (choice === 0 || choice > 5) {
+      console.log("1부터 5까지만 기입이 가능합니다");
+      console.log("다시 실행해주세요");
+      rl.close();
+      return;
+    }
+
+    userAnswer.push(choice);
     calculateScore(answer, disagree, agree);
 
     if (userAnswer.length === arr.length) {
