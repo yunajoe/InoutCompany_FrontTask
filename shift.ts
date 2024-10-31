@@ -1,5 +1,5 @@
-const data = [1, 2, 3];
-const selected = [2, 3];
+import { data, selected } from "./utils";
+
 const duplicatedValueArr: number[] = [];
 //  배열 오름차수 정렬 함수
 const sortAscending = (arr: number[]) => {
@@ -46,4 +46,4 @@ const shiftArrToLeft = (dataArr: number[], selectedArr: number[]) => {
 };
 
 shiftArrToLeft(data, selected);
-console.log("data", data);
+console.log("data====>", data);

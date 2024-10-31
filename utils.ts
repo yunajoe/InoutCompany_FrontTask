@@ -1,3 +1,4 @@
+// mbti 데이터
 export const questions = [
   {
     disagree: "E",
@@ -40,3 +41,7 @@ export const questions = [
     text: `그때그때 즉흥적으로 끌리는 메뉴를 선택해서 식사하는 게 좋다.`,
   },
 ];
+
+// shift 데이터
+export const data = [1, 2, 3];
+export const selected = [2, 3];
