@@ -1,27 +1,21 @@
-const duplicatedValueArr: number[] = [];
-//  배열 오름차수 정렬 함수
-const sortAscending = (arr: number[]) => {
-  arr.sort((a, b) => {
-    if (a < b) {
-      return -1;
-    }
-    if (b < a) {
-      return 1;
-    }
-    return 0;
-  });
-};
+const shiftArrToLeft = (arr: number[], selected: number[]) => {
+  let selectedCount = 0;
 
-// 최종적으로 selected array를 기존의 배열에서 정렬하는 함수
-const shiftArrToLeft = (dataArr: number[], selectedArr: number[]) => {
-  sortAscending(selectedArr);
+  for (let i = 1; i < arr.length; i++) {
+    if (!selected.includes(arr[i])) {
+      continue;
+    }
+    if (selected.includes(arr[i - 1])) {
+      continue;
+    }
+    selectedCount++;
+    [arr[i - 1], arr[i]] = [arr[i], arr[i - 1]];
 
-  for (let i = 0; i < dataArr.length; i++) {
-    if (!selectedArr.includes(dataArr[i])) {
-      selectedArr.push(dataArr[i]);
+    if (selectedCount >= selected.length) {
+      break;
     }
   }
-  console.log(selectedArr);
+  console.log(arr);
 };
 
 //test
